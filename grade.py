@@ -97,6 +97,7 @@ def get_grade(s,max_ID):
         login(s)
         return get_grade(s,max_ID)
     sheet=re.findall(pattern2,Grades)
+    print(sheet)
     return sheet
 
 def parse_grade(sheet):
