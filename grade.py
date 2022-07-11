@@ -90,8 +90,7 @@ def get_ID(s):
 
 def get_grade(s,max_ID):
     logger.info('getting the grades...')
-    url4='https://jw.ustc.edu.cn/for-std/grade/sheet/getGradeList?semesterIds=' + '221'
-    #str(max_ID)
+    url4='https://jw.ustc.edu.cn/for-std/grade/sheet/getGradeList?semesterIds=221'# + str(max_ID)
     Grades=s.get(url4,headers=headers).text
     if '统一身份认证登录' in Grades:
         logger.info('Not logged in, retry by recursion...')
